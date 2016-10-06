@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp" android:layout_height="wrap_content" android:layout_weight=".25">
+
+    <ImageView android:id="@+id/imageViewItem"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/featureplaceholder"
+        android:clickable="true"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_alignLeft="@+id/imageViewItem"
+        android:layout_alignRight="@+id/imageViewItem"
+        android:id="@+id/textViewItemName"
+        android:layout_below="@+id/imageViewItem"
+        android:text="Future Episode"
+        android:textStyle="normal"
+        android:textSize="10dp"
+        android:textColor="#666666"
+        android:gravity="left"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_alignLeft="@+id/imageViewItem"
+        android:layout_alignRight="@+id/imageViewItem"
+        android:id="@+id/episodenum"
+        android:layout_below="@+id/textViewItemName"
+        android:textSize="10sp"
+        android:text="Episode 10"
+        android:gravity="left"
+        android:textColor="#666666" />
+
+
+</RelativeLayout>

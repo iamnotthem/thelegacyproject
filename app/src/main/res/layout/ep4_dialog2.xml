@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="10dp"
+              android:background="@android:color/white"
+              android:layout_width="320dp"
+              android:layout_height="wrap_content">
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:text="@string/ep4_2"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RadioGroup
+        android:id="@+id/ep4_rg1"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:textColor="@android:color/black"
+            android:text="@string/ep4_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:textColor="@android:color/black"
+            android:text="@string/ep4_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:textColor="@android:color/black"
+            android:text="@string/ep4_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="10dp"
+              android:background="@android:color/white"
+              android:layout_width="320dp"
+              android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:textColor="@android:color/black"
+        android:text="@string/ep6_13"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/go_to_web_instagram"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="38dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Instagram"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

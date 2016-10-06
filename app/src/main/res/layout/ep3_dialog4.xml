@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="10dp"
+              android:background="@android:color/white"
+              android:layout_width="320dp"
+              android:layout_height="wrap_content">
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:text="@string/ep3_15"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/ep3_share"
+        android:layout_marginTop="18dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Share"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

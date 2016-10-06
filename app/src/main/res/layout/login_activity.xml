@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splashbigpigh1"
+        android:scaleType="fitXY" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/main"
+        android:clickable="false">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/tlp_logo2"
+            android:id="@+id/logo"
+            android:layout_above="@+id/intro"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the 1st Living Album. The Legacy Project is an interactive, hip-hop experience like none other."
+            android:id="@+id/intro"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:textAlignment="center"
+            android:gravity="bottom"
+            android:paddingBottom="30dp"
+            android:layout_above="@+id/email"
+            android:textSize="12dp"
+            android:textColor="#ffffff" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_above="@+id/password">
+
+            <EditText
+                android:layout_width="200dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:hint="email"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:inputType="textEmailAddress|textAutoComplete"
+                android:textAlignment="center"
+                android:id="@+id/email2"
+                android:imeOptions="actionNext"
+                android:textColorHint="#ffffff"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_margin="20dp">
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:inputType="textPassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="password"
+                android:textAlignment="center"
+                android:imeOptions="actionDone"
+                android:visibility="gone"
+                android:id="@+id/pass"
+                android:textColorHint="#ffffff" />
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/forgot_password"
+                android:layout_marginTop="18dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Forgot password?"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_margin="15dp"
+            android:paddingTop="100dp"
+            android:layout_below="@+id/password"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/logging"
+                android:gravity="center_horizontal"
+                >
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:id="@+id/login"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:onClick="onClick"
+                android:visibility="gone"
+                android:background="@drawable/button"
+                android:clickable="true"
+                android:layout_gravity="bottom"
+                 />
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:id="@+id/login1"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:onClick="onClick"
+                    android:visibility="visible"
+                    android:background="@drawable/button"
+                    android:clickable="true"
+                    android:layout_gravity="bottom"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/create"
+                android:layout_below="@+id/logging"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_account"
+                    android:id="@+id/account"
+                    android:onClick="onClick"
+                    android:clickable="true"
+                    android:background="@drawable/button"
+                    android:textAlignment="center"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone"
+                    android:singleLine="false"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff" />
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_account"
+                    android:id="@+id/account1"
+                    android:onClick="onClick"
+                    android:clickable="true"
+                    android:background="@drawable/button"
+                    android:textAlignment="center"
+                    android:visibility="visible"
+                    android:layout_gravity="bottom"
+                    android:singleLine="false"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

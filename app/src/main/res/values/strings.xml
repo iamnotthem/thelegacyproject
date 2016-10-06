@@ -1,0 +1,273 @@
+<resources>
+    <string name="app_name">bigpiph</string>
+    <string name="login">log in</string>
+    <string name="create_account">Create Account</string>
+    <string name="intro">Welcome to the 1st Living Album. The Legacy Project is an interactive, hip-hop experience like none other.</string>
+    <string name="KNC">Kings No Crowns/// Queens No Crowns is a lifestyle brand "For those who don't need permission for greatness..."</string>
+    <string name="just">jUSt, pronounced "Just-Us", is all about youth empowerment and healthy and sustainable community building. One of our programs, Books and Bagels, is a cultural community event with free breakfast, books, reading time for the little ones, and workshops and sessions for the older folks. They also provide high schoolers to participate in Global Kids-Arkansas which you more out about below </string>
+    <string name="Global">A summer program in which students from underserved communities go abroad for education and social services projects after receiving domestic tutelage. Also, 10% of all net proceeds of merch and music go towards this cause. For more information, check out HERE</string>
+    <string name="credit">This project has been a labor of love with many different contributors in many different facets.  However, we would like to give a huge shout out and note of appreciation to a few of the crowdfunding backers who caused this project to be.  We thank all of ya’ll:</string>
+    <string name="funders"><![CDATA[Aaron A Carey\n
+                            Ajamu Ktiwana\n
+                              Andre\n
+Antoine Lyseight\n
+Asha Morrow\n
+Ayanna Wooten\n
+Calvin Smith\n
+Carlos Santiago\n
+Chuck\n
+Dan Gallegos\n
+Devin Griffin\n
+Florine Alford\n
+Herman L. Hampton\n
+James Barker\n
+Jeannette Balleza\n
+Jessica Mylonas\n
+Jennifer Nicole\n
+Jocquetta Carter\n
+Joel Dixon\n
+Jordanna Kincey Lane\n
+Kelly Garrett\n
+Kevin Mitchell\n
+Kiisha Morrow\n
+LaTonya Lee\n
+Ley Ley Taylor\n
+Mae Morrow\n
+Marquese McFerguson\n
+Maureen Tufts\n
+Montianna Bingham\n
+Nisa Frank\n
+Sudi West\n
+Sue Yang\n
+Theresa Timmons\n
+Tyson Clark]]> </string>
+
+    <string name="ep_next">Next</string>
+    <string name="ep_back">Back</string>
+
+
+    <string name="ep1_1">Well it took Piph long enough, but it looks like we\'re finally here.
+        I was beginning to think we\'d never take off. \n\nAnyway, I\'m getting ahead of myself. My name is...</string>
+    <string name="ep1_2">Lisa</string>
+    <string name="ep1_3">Marcus</string>
+    <string name="ep1_4">Taylor</string>
+    <string name="ep1_5">Well, now that that\'s out of the way, are you ready to participate in \"The Legacy Project\" experience?</string>
+    <string name="ep1_6">Of Course</string>
+    <string name="ep1_7">Nah</string>
+    <string name="ep1_8">Well cool then, \"I Am Not Them: The Legacy Project\" is not only a long title, but a \"living album\"
+                curated by Big Piph and The FAM. Good music, great people, a few stories, and your engagement will make this
+                an incredible and unique experience. Game changing even.
+                \n\nCan\'t wait to begin, but first... you know my name, but you\'re still a mystery.
+                Let\'s fix that. Nice to meet you...</string>
+    <string name="ep1_9">Well, now that that\'s out of the way, are you ready to participate in \"The Legacy Project\" experience?</string>
+    <string name="ep1_10">Of Course</string>
+    <string name="ep1_11">Nah</string>
+    <string name="ep1_12">Soooo... let\'s try this again...\n\nHello, my name is %s.
+        \n\nAre you ready
+                to participate in the \"The Legacy Project\" experience? Just choose 1 of the options below...</string>
+    <string name="ep1_13">Yup</string>
+    <string name="ep1_14">Sure</string>
+    <string name="ep1_15">That\'s What I\'m Here For</string>
+    <string name="ep1_16">We\'re officially FAM now and you\'re fully engaged. This should be a real cool journey.
+                We\'ll talk again soon, but til then, look around, tell a friend, and enjoy.\n\nWelcome to The Legacy Project</string>
+    <string name="ep1_17">Continue</string>
+
+    <string name="ep2_1">Good to see you back.  As you already know, I\'m your pilot through this all,
+        but you should definitely understand
+        that I\'m so much more.  I know time is valuable in our situation,
+        so if I had to break myself down at-a-glance, I\'d say that\n\n I\'m a... \n\n
+        Leader \n Movie Fiend \n Romantic</string>
+    <string name="ep2_2">Let\'s Proceed</string>
+    <string name="ep2_3">Now, help me out, and tell me a little more about yourself.
+        But remember Youtube raised me, so keep it short please.\n\n I\'m a... \n\n</string>
+    <string name="ep2_4">And now a picture of you would be great</string>
+    <string name="ep2_5">Camera</string>
+    <string name="ep2_6">Cool, well let\'s see what we have</string>
+    <string name="ep2_7">Does that work for you? </string>
+    <string name="ep2_8">Well cool.  Not bad at all.  I say we share it with a few folks.</string>
+    <string name="ep2_9">Well, I have a few other logistics to take care of it, so I\'ve got to take off.  If you need anything, holla at Piph.
+        He knows how to reach me.
+        \n\n Oh, and I forgot to mention, I\'m a big music person too.
+        When you get a chance, let me know a song that you feel embodies your
+        greatness in general or just makes you feel epic.  I\'m always looking for new music.\n</string>
+    <string name="ep2_13">Song - Artist</string>
+    <string name="ep2_10">And since I know you want to listen, here are some of mine:\n</string>
+    <string name="ep2_11">Get Like Me Playlist</string>
+    <string name="ep2_12">Talk to you soon.</string>
+    <string name="ep2_14">I wasn\'t gonna say anything, but I thought you could do better too.  Let\'s try this again.</string>
+
+
+    <string name="ep3_1">So, which one do you prefer?</string>
+    <string name="ep3_2">Person</string>
+    <string name="ep3_3">Place</string>
+    <string name="ep3_4">Thing</string>
+    <string name="ep3_5">You might not know it yet, but my life has more ups and downs than most.
+        The one person who has always helped me make sense of it all is my little brother.
+        Although I\'m known as the determined, focused one, sometimes I struggle.
+        He, however, always has the right amount of chill, mixed with the
+        right levels of raw wisdom to help me get back right.
+        \n\nWho\'s that special person for you who keeps you focused?
+        Helps motivate you?  Brings you chill when things get crazy?  I\'d love to know.\n</string>
+    <string name="ep3_6">As you know, my life has more ups and downs than most,
+        so I\'m a firm believer that everyone needs that one spot they can get away to
+        to ease their mind.  I mean, I\'ve travelled all over the world, but there\'s still
+        nothing as relaxing as when I\'m strolling through Newbury Park back home.
+        Something about a 5 am walk when even the sun is hitting the snooze button refreshes me every time.
+        \n\nWhat\'s a special place you have?  The gym?  A special room?
+        Favorite restaurant?  Share with me...</string>
+    <string name="ep3_7">So my life definitely has more ups and downs than most,
+        but my mom told me not to let anyone steal my joy.  Now I admit I was a lil
+        hard headed at first, but when I finally listened, I found my love for rock climbing.
+        There\'s something about the total engagement of every body part while being suspended
+        so high in the air that makes me forget all other cares in the world.  And when my feet
+        touch the ground again, I feel like I\'m ready for the next battle.
+        \n\nWhat special thing or things you do that keep you motivated?
+        Helps clear your mind?  Gets you ready for war?  I\'d love to know.</string>
+    <string name="ep3_8">Ahhhh...not bad at all.  You like?</string>
+    <string name="ep3_9">It\'s Great</string>
+    <string name="ep3_10">Let Me Redo, Please</string>
+    <string name="ep3_11">Ok, let\'s try that getting that picture again.</string>
+    <string name="ep3_12">Cool now?</string>
+    <string name="ep3_13">It\'s Good</string>
+    <string name="ep3_14">Mmmmm... nah</string>
+    <string name="ep3_15">Well, I\'m glad you think so too. \nSo how about we share it now?
+        I\'m sure others would want to see and be inspired.  It would be great to see theirs as well.
+        Please use #runTLP to tag it, too!</string>
+    <string name="ep3_16">Of Course I Want to Share and See!</string>
+    <string name="ep3_17">No thank you.</string>
+    <string name="ep3_18">And why don\'t we see who else is at the party.  Let\'s check out some other folks pics!</string>
+    <string name="ep3_19">You sure you don\'t want to share yours?</string>
+    <string name="ep3_20">You\'re right.  I do.</string>
+    <string name="ep3_21">Well, I\'m glad we had that experience together.
+        Great to know I\'m not alone.  Anyway, hope you have a good one.  Talk to you soon.\n\n
+        Oh, and when you get a chance, let me know a song that motivates you.  Here are some of mine:\n</string>
+    <string name="ep3_22">Motivation Playlist</string>
+    <string name="ep3_23">Check out the Instagram Wall</string>
+
+
+    <string name="ep4_1">Crazy to believe, but I still have a slight fear of heights. I was petrified at first,
+        but I realized the best thing was to just dive in head first.
+        Still... it sure would help if I had a friend on the rest of this journey. Yeah...
+        that\'s a not so subtle hint meaning you.</string>
+    <string name="ep4_2">So check this out, I\'ma work on this height thing before it\'s too late and
+        I just get stuck in my ways. How about you try something too? There may not be time for all, so 1st
+        choice counts. Soooo...\n\nWhich are you up for?</string>
+    <string name="ep4_3">Pay-It-Forward</string>
+    <string name="ep4_4">Random Compliments</string>
+    <string name="ep4_5">The Life Change</string>
+    <string name="ep4_6">You see that desk your neighbors are moving out?
+        Help them carry it. That lady in front of you whose items look affordable?
+        Gon\' pay for it. You know that irritating homeboy through affiliation who needs a ride
+        to the airport, but doesn\'t have a car? Let him Uber. Well, ok... gon\' give him a ride,
+        but tell him to pay it forward twice.\n\nIt\'s very simple. Sometime today do something nice
+        for someone and expect nothing in return, other than asking them to pay-it-forward too. </string>
+    <string name="ep4_7">There\'s something good to see in everybody. (I think.) Well, why don\'t you let
+        a person know today? \n\nSo here it is, give someone a random, out of nowhere compliment expecting
+        nothing in return. Choose someone whom you normally wouldn\'t tell OR give compliments to multiple people.
+        You have one day. Bold you are... </string>
+    <string name="ep4_8">Now I definitely know habits can\'t be changed in a day, but the commitments to change them can be made.
+        \n\nWhat\'s that thing you\'ve been planning to switch up, or learn, or stop doing, or
+        do more consistently that you\'ve been putting off? Cook? Rediscover your literacy?
+        Learn how to curse in German? Start those kickboxing classes? \n\nHow about taking a day
+        to figure out the next move and making that commitment? </string>
+    <string name="ep4_9">And if alright with you, please let some other folks know about it too.
+        It\'s not that you\'re bragging (unless you want to), it\'s just that you never know who you\'re inspiring.
+        So go ahead and Twitter, Facebook, or whatever it and give it the tag #TooLateTLP\n\nAnd
+        it\'s playlist time again. What song makes you feel all "I can become a better person",
+        "it\'s gonna be alright", or "save the world-ish"? </string>
+    <string name="ep4_10">And of course you want to know mine too, right? No problem... </string>
+    <string name="ep4_11">Too Late Playlist</string>
+
+
+    <string name="ep5_1">Not to put all my business out there, but I kinda hit big
+        on the Powerball today.  You already know I quit my other-other job,
+        bought a chain, got a chef, bought my chef a chain, greased Uncle Sam\’s
+        palms, and put the down payment on the Tesla.  But perhaps more importantly...
+        I\'m in a giving mood.  Matter of fact, I wanna give to those who give.  </string>
+    <string name="ep5_2">Where\'s my cut?</string>
+    <string name="ep5_3">So here\'s the deal, do you know of any charitable
+        organization that needs some extra financial help?  If so, I have 2
+        $200 prizes (all ones) to give to two causes.  I\'m going to choose the
+        top 5 that catch my eye and then present them to you, and a few other FAM members to pick the winner.</string>
+    <string name="ep5_4">Pretty cool, right?  Yeah, I am.  Well, first we have to get those submissions up and in.</string>
+    <string name="ep5_5">Check out the Submission Form</string>
+    <string name="ep5_6">Maybe I\'ll Check Out Later</string>
+    <string name="ep5_7">No problem.  To submit later or just to check out the submissions,
+        you can always go to www.iamnotthem.com OR www.bigpiph.com.</string>
+    <string name="ep5_8">Oh, and unsure if you heard, but Big Piph tends to get involved in the
+        community from time to time too.  Check out the jUSt and Global Kids-Arkansas links in
+        the “More:  Partner Organizations” section to find out more and how you can play a part.</string>
+    <string name="ep5_9">And as you should know by now, it\'s music time.  What\'s a song you play
+        when you want to get your “activist” on?  Rebel, revolutionary music,
+        or just when you want to cause some change?   Let me know.</string>
+    <string name="ep5_10">Here are some of mine:</string>
+    <string name="ep5_11">“Tell Em” Pilot Playlist</string>
+
+
+    <string name="ep6_1">Listen, sometimes you gotta put your cool down.\n\n
+        So, how about we do a fun pic?  You know, wild hair, awkward position, no makeup,
+        silly face, having fun, a massive dumb usie, or whatever else you can think of.
+        And if you\'re silly all the time, maybe that means you take a serious shot?
+        I don\'t know, but...</string>
+    <string name="ep6_2">Remember to have fun with it!</string>
+    <string name="ep6_3">You\'re pretty good with these pictures.  But what do you think?</string>
+    <string name="ep6_4">My Selfie Game is Unstoppable</string>
+    <string name="ep6_5">Let Me Try One More</string>
+    <string name="ep6_6">Ok, let\'s try another picture.</string>
+    <string name="ep6_7">Cool now?</string>
+    <string name="ep6_8">I\'m Great</string>
+    <string name="ep6_9">Nope</string>
+    <string name="ep6_10">Ok. Calm down. It is a good picture though.\n\nSo, you know the routine.  How about we share it now?  Inspire and be inspired.
+        Please use #getlooseTLP to tag it, too!</string>
+    <string name="ep6_11">Of Course I Want to Share and See!</string>
+    <string name="ep6_12">No thank you.</string>
+    <string name="ep6_13">Once again, let\'s see what other people shared. It\'s picture time!</string>
+    <string name="ep6_14">You sure you don\'t want to share yours?</string>
+    <string name="ep6_15">You\'re right.  I do.</string>
+    <string name="ep6_16">No thank you.</string>
+    <string name="ep6_17">Well cool.  And here are some of the most fun, happy, put your cool down songs I vibe to.
+        Pilot Playlist.</string>
+    <string name="ep6_18">What are some of yours?</string>
+    <string name="ep6_19">https://www.instagram.com/explore/tags/getlooseTLP/</string>
+
+
+    <string name="ep7_1">So, the other day when I was speaking with Piph, he was asking me if I\'m ready
+        for the big day.  I didn\'t respond, but he saw in my eyes that I\'ve analyzed every angle, soul searched,
+        and know what I\'m getting into.</string>
+    <string name="ep7_2">Now, I know you\'re ready for the end of our journey too, but it\'s always good
+        to understand your chill first.   So, I\'ve got some questions for you.  From the fun, to insightful,
+        to possibly just weird; choose your preferred category.  Oh, and you should know that there is nothing
+        recorded and there are no wrong answers; but you can only choose one group.  Have fun...</string>
+    <string name="ep7_3">DEEP</string>
+    <string name="ep7_4">MID-LEVEL</string>
+    <string name="ep7_5">KICKIN-IT</string>
+    <string name="ep7_6">Deep it is....</string>
+    <string name="ep7_7">Mid-Level it is...</string>
+    <string name="ep7_8">Kickin It. Sound good to me.</string>
+    <string name="ep7_9">Here We Go</string>
+    <string name="ep7_10">Music time.  What\'s a song that you love that you wish other
+        people understood better?  Or a song that is simple in approach, but seems to
+        pack way more knowledge than meets the eye? </string>
+    <string name="ep7_14">As always, here are a few of mine...</string>
+    <string name="ep7_11">http://www.bigpiph.com/ygk-deep</string>
+    <string name="ep7_12">http://www.bigpiph.com/ygk-mid</string>
+    <string name="ep7_13">http://bigpiph.com/ygk-kickinit</string>
+
+
+    <string name="ep8_1">Well, it\'s been real.  A pleasure even.  Unfortunately, I can\'t share
+        what I\'ll be doing next, but I just may pop up from time to time. Who knows? </string>
+    <string name="ep8_2">In the meantime, know that this was never just me and you on this trip.
+        Along the way, we all didn\'t have the same goals, ideas, or even trajectory;
+        but as you can see below, some of us had more in common than we thought.
+        \n\nAnyway, and more importantly, we all know who we\'re not.  Til next time...</string>
+    
+    
+    <string name="get_like_me_playlist">https://open.spotify.com/user/bigpiph/playlist/574Axtjfdq6SJ2PK9aR15I</string>
+    <string name="run_playlist">https://open.spotify.com/user/bigpiph/playlist/29tq60d7dKxNJhmtqheOWp</string>
+    <string name="too_late_playlist">https://play.spotify.com/user/bigpiph/playlist/6Ut4kESb6xZjj4h7BNAuRX</string>
+    <string name="tell_em_playlist">https://open.spotify.com/user/bigpiph/playlist/5cTG44Q5tHmAHQ9gh5AQ59</string>
+    <string name="get_loose_playlist">https://open.spotify.com/user/bigpiph/playlist/7duJ2yMW3ROUx3VUCSBePh</string>
+    <string name="gotta_know_playlist">https://open.spotify.com/user/bigpiph/playlist/7duJ2yMW3ROUx3VUCSBePh</string>
+
+
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/main"
+    android:gravity="center_vertical">
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="5dp"
+            android:src="@drawable/circledusermalefilled50"
+            android:layout_marginRight="6dp"
+            android:scaleType="fitXY"
+            android:id="@+id/storepic"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/storepic"
+            android:layout_marginLeft="6dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/productName"
+                android:singleLine="true"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:textColor="#222222"
+                android:text="T-shirt"
+                android:textSize="10dp"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pricing"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/price"
+                android:text="ask for details"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textColor="#05c6e4"
+                android:textStyle="bold"
+                android:drawableTint="#05c6e4"
+                android:contextClickable="false"
+                android:background="@drawable/back"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>
