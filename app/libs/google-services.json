@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "338528178226",
+    "firebase_url": "https://horse-logics.firebaseio.com",
+    "project_id": "horse-logics",
+    "storage_bucket": "horse-logics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338528178226:android:d1deffeb1173b1cc",
+        "android_client_info": {
+          "package_name": "com.horselogic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338528178226-lslm3atb10u3phegr1keuqf79odu1i0o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.horselogic",
+            "certificate_hash": "89B6319995591B988E7E70708D7691EF6D5A7DCC"
+          }
+        },
+        {
+          "client_id": "338528178226-s523mcugjei3j8hpsaffpi8p33gj652g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIWddIIu2-bzoIEgAlii-bcl6T8x8CzCE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338528178226-klto15qk6fs3um242c4ripfga7392lte.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.terence.horseLogics"
+              }
+            },
+            {
+              "client_id": "338528178226-s523mcugjei3j8hpsaffpi8p33gj652g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

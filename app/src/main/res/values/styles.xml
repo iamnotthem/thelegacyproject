@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="TwoWayView">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="TwoWayViewBase">
+        <item name="android:background">#999999</item>
+    </style>
+
+    <style name="ShadowText">
+        <item name="android:paddingLeft">21px</item>
+        <item name="android:paddingBottom">21px</item>
+        <item name="android:textColor">#FFFF00</item>
+        <item name="android:shadowColor">#FF0000</item>
+        <item name="android:shadowDx">12</item>
+        <item name="android:shadowDy">12</item>
+        <item name="android:shadowRadius">12</item>
+    </style>
+
+    <style name="StateText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">#33000000</item>
+    </style>
+
+    <style name="Engagement" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/EngagementAnim</item>
+    </style>
+
+    <style name="EngagementAnim">
+        <item name="android:windowEnterAnimation">@anim/enter</item>
+        <item name="android:windowExitAnimation">@anim/exit</item>
+    </style>
+
+</resources>

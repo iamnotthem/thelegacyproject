@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ns804.bigpiph">
+
+    <!--
+    bigpiph_keystore.jks
+    all passwords: bigpiph
+    alias: bigpiph
+    -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- Permission to get DeviceId -->
+
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- Enables vibration permission for notification. -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!--
+     Creates a custom permission so only this app can receive its messages.
+
+     NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+           where PACKAGE is the application's package name.
+    -->
+    <permission
+        android:name="ns804.bigpiph.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="ns804.bigpiph.permission.C2D_MESSAGE"/>
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <application
+        android:name=".shitcode.MainActivity2"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <meta-data
+            android:name="PW_APPID"
+            android:value="8E539-DE3BC"/>
+        <meta-data
+            android:name="PW_PROJECT_ID"
+            android:value="A781769472375"/>
+        `
+        <service
+            android:name=".shitcode.myPlayer"
+            android:enabled="true"/>
+
+        <activity
+            android:name=".shitcode.Splash_Activity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+
+                <!-- MAIN represents that it is the Main Activity -->
+                <action android:name="android.intent.action.MAIN"/>
+                <!-- Launcher Denotes that it will be the first launching activity -->
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ApiCalls"/>
+        <activity
+            android:name=".shitcode.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".shitcode.Music_Activity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".shitcode.Episodes_activity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".shitcode.CrowdFunding"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".shitcode.Store_Activity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".shitcode.Family_Activity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".shitcode.Individual_Fam"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".shitcode.IndividualEpisodes"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".shitcode.WebActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".shitcode.YouTubeActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".shitcode.MoreActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.pushwoosh.inapp.WebActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!--
+        <receiver android:name="com.ns804.dentalprotrader.NotificationReceiver" />
+        <meta-data android:name="PW_NOTIFICATION_RECEIVER"
+                   android:value="com.ns804.dentalprotrader.NotificationReceiver"/>
+        -->
+
+
+        <!-- <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /> -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="PW_NOTIFICATION_RECEIVER"
+            android:value="ns804.bigpiph.NotificationReceiver"/>
+
+        <activity android:name="com.pushwoosh.richpages.RichPageActivity"/>
+        <activity android:name="com.pushwoosh.MessageActivity"/>
+        <activity android:name="com.pushwoosh.PushHandlerActivity"/>
+
+        <service android:name="com.pushwoosh.inapp.InAppRetrieverService"/>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+
+                <category android:name="ns804.bigpiph"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pushwoosh.local.AlarmReceiver"/>
+
+        <service
+            android:name="com.pushwoosh.GCMInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.pushwoosh.GCMListenerService"/>
+        <service
+            android:name=".shitcode.GcmListener"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.pushwoosh.GCMRegistrationService"
+            android:exported="false">
+        </service>
+
+        <activity android:name=".qualitycode.eps.EP1Activity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".qualitycode.eps.EP2Activity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".qualitycode.eps.EP3Activity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".qualitycode.eps.EP4Activity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".qualitycode.eps.EP5Activity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".qualitycode.eps.EP6Activity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".qualitycode.eps.EP7Activity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".qualitycode.eps.EP8Activity"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>
