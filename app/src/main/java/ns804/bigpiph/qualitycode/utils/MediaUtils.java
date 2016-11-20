@@ -7,6 +7,7 @@ import android.content.CursorLoader;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -19,6 +20,23 @@ import java.io.ByteArrayOutputStream;
 
 
 public class MediaUtils {
+
+
+
+    public static Bitmap getResizedBitmap(Bitmap bm, float scale) {
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+        // CREATE A MATRIX FOR THE MANIPULATION
+        Matrix matrix = new Matrix();
+        // RESIZE THE BIT MAP
+        matrix.postScale(scale, scale);
+
+        // "RECREATE" THE NEW BITMAP
+        Bitmap resizedBitmap = Bitmap.createBitmap(
+                bm, 0, 0, width, height, matrix, false);
+        bm.recycle();
+        return resizedBitmap;
+    }
 
 
     @SuppressLint("NewApi")

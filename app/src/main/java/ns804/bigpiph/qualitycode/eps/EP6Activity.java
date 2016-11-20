@@ -2,10 +2,14 @@ package ns804.bigpiph.qualitycode.eps;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
@@ -14,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -30,6 +35,7 @@ import ns804.bigpiph.R;
 import ns804.bigpiph.qualitycode.api.ApiRequest;
 import ns804.bigpiph.qualitycode.api.EngagementService;
 import ns804.bigpiph.qualitycode.api.response.EngagementResponse;
+import ns804.bigpiph.qualitycode.utils.MediaUtils;
 import ns804.bigpiph.shitcode.utils.ImageUtils;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -59,7 +65,7 @@ public class EP6Activity extends AppCompatActivity {
         findViewById(R.id.share).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                share();
+
             }
         });
         dialog = new Dialog(EP6Activity.this, R.style.Engagement);
@@ -74,14 +80,6 @@ public class EP6Activity extends AppCompatActivity {
         });
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         gotoFirst();
-    }
-
-    private void share() {
-        Intent shareIntent = new Intent();
-        shareIntent.setAction(Intent.ACTION_SEND);
-        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
-        shareIntent.setType("image/*");
-        startActivity(Intent.createChooser(shareIntent, "Share Image"));
     }
 
     private void gotoFirst() {
@@ -118,7 +116,6 @@ public class EP6Activity extends AppCompatActivity {
             }
         });
     }
-
     private void gotoSecond() {
         dialog.setContentView(R.layout.ep6_dialog2);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -161,7 +158,6 @@ public class EP6Activity extends AppCompatActivity {
             }
         });
     }
-
     private void gotoThird() {
         dialog.setContentView(R.layout.ep6_dialog3);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -223,7 +219,6 @@ public class EP6Activity extends AppCompatActivity {
         });
         if (bitmap != null) ((ImageView) dialog.findViewById(R.id.photo_content)).setImageBitmap(bitmap);
     }
-
     private void gotoThirdB() {
         dialog.setContentView(R.layout.ep6_dialog2);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -267,7 +262,6 @@ public class EP6Activity extends AppCompatActivity {
             }
         });
     }
-
     private void gotoThirdC() {
         dialog.setContentView(R.layout.ep6_dialog3c);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -327,9 +321,16 @@ public class EP6Activity extends AppCompatActivity {
                 }
             }
         });
-        if (bitmap != null) ((ImageView) dialog.findViewById(R.id.photo_content)).setImageBitmap(bitmap);
-    }
 
+        ImageView photo = (ImageView) dialog.findViewById(R.id.photo_content);
+        if (bitmap != null) photo.setImageBitmap(bitmap);
+
+        photo.setDrawingCacheEnabled(true);
+        photo.buildDrawingCache();
+        bitmap = Bitmap.createBitmap(photo.getDrawingCache());
+        photo.setDrawingCacheEnabled(false);
+
+    }
     private void gotoFourth() {
         dialog.setContentView(R.layout.ep6_dialog4);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -373,7 +374,6 @@ public class EP6Activity extends AppCompatActivity {
             }
         });
     }
-
     private void gotoFifthA() {
         dialog.setContentView(R.layout.ep6_dialog5a);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -418,13 +418,11 @@ public class EP6Activity extends AppCompatActivity {
         dialog.findViewById(R.id.go_to_web_instagram).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // webIntent(getString(R.string.ep6_19));
-                // share();
+                // Share
                 shareToIG();
             }
         });
     }
-
     private void gotoFifthB() {
         dialog.setContentView(R.layout.ep6_dialog5b);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -485,7 +483,6 @@ public class EP6Activity extends AppCompatActivity {
             }
         });
     }
-
     private void goToSixth() {
         dialog.setContentView(R.layout.ep6_final);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -630,7 +627,17 @@ public class EP6Activity extends AppCompatActivity {
                         if (null != dialog) dialog.dismiss();
                         try {
                             Bitmap original = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
-                            bitmap = ImageUtils.toGrayscale(original);
+                            ExifInterface exifInterface = new ExifInterface(mImageCaptureUri.getPath());
+                            String orientString = exifInterface.getAttribute(ExifInterface.TAG_ORIENTATION);
+                            int orient = orientString != null ? Integer.parseInt(orientString) : ExifInterface.ORIENTATION_NORMAL;
+                            int rotationAngle = 0;
+                            if (orient == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+                            if (orient == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+                            if (orient == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+                            Matrix matrix = new Matrix();
+                            matrix.setRotate(rotationAngle, (float) original.getWidth() / 2, (float) original.getHeight() / 2);
+                            Bitmap rotatedBitmap = Bitmap.createBitmap(original, 0, 0, original.getWidth(), original.getHeight(), matrix, true);
+                            bitmap = x(rotatedBitmap);
                         } catch (Exception e) {}
                         gotoThird();
                     }
@@ -640,7 +647,17 @@ public class EP6Activity extends AppCompatActivity {
                     if (null != dialog) dialog.dismiss();
                     try {
                         Bitmap original = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
-                        bitmap = ImageUtils.toGrayscale(original);
+                        ExifInterface exifInterface = new ExifInterface(mImageCaptureUri.getPath());
+                        String orientString = exifInterface.getAttribute(ExifInterface.TAG_ORIENTATION);
+                        int orient = orientString != null ? Integer.parseInt(orientString) : ExifInterface.ORIENTATION_NORMAL;
+                        int rotationAngle = 0;
+                        if (orient == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+                        if (orient == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+                        if (orient == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+                        Matrix matrix = new Matrix();
+                        matrix.setRotate(rotationAngle, (float) original.getWidth() / 2, (float) original.getHeight() / 2);
+                        Bitmap rotatedBitmap = Bitmap.createBitmap(original, 0, 0, original.getWidth(), original.getHeight(), matrix, true);
+                        bitmap = x(rotatedBitmap);
                     } catch (Exception e) {}
                     gotoThird();
                     break;
@@ -649,7 +666,17 @@ public class EP6Activity extends AppCompatActivity {
                         if (null != dialog) dialog.dismiss();
                         try {
                             Bitmap original = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
-                            bitmap = ImageUtils.toGrayscale(original);
+                            ExifInterface exifInterface = new ExifInterface(mImageCaptureUri.getPath());
+                            String orientString = exifInterface.getAttribute(ExifInterface.TAG_ORIENTATION);
+                            int orient = orientString != null ? Integer.parseInt(orientString) : ExifInterface.ORIENTATION_NORMAL;
+                            int rotationAngle = 0;
+                            if (orient == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+                            if (orient == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+                            if (orient == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+                            Matrix matrix = new Matrix();
+                            matrix.setRotate(rotationAngle, (float) original.getWidth() / 2, (float) original.getHeight() / 2);
+                            Bitmap rotatedBitmap = Bitmap.createBitmap(original, 0, 0, original.getWidth(), original.getHeight(), matrix, true);
+                            bitmap = x(rotatedBitmap);
                         } catch (Exception e) {}
                         gotoThirdC();
                     }
@@ -659,7 +686,17 @@ public class EP6Activity extends AppCompatActivity {
                     if (null != dialog) dialog.dismiss();
                     try {
                         Bitmap original = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
-                        bitmap = ImageUtils.toGrayscale(original);
+                        ExifInterface exifInterface = new ExifInterface(mImageCaptureUri.getPath());
+                        String orientString = exifInterface.getAttribute(ExifInterface.TAG_ORIENTATION);
+                        int orient = orientString != null ? Integer.parseInt(orientString) : ExifInterface.ORIENTATION_NORMAL;
+                        int rotationAngle = 0;
+                        if (orient == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+                        if (orient == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+                        if (orient == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+                        Matrix matrix = new Matrix();
+                        matrix.setRotate(rotationAngle, (float) original.getWidth() / 2, (float) original.getHeight() / 2);
+                        Bitmap rotatedBitmap = Bitmap.createBitmap(original, 0, 0, original.getWidth(), original.getHeight(), matrix, true);
+                        bitmap = x(rotatedBitmap);
                     } catch (Exception e) {}
                     gotoThirdC();
                     break;
@@ -667,22 +704,63 @@ public class EP6Activity extends AppCompatActivity {
         }
     }
 
-    private void shareToIG() {
-        File file = new File(getApplicationContext().getCacheDir(), "toShare001" + ".png");
-        try {
-            FileOutputStream fos = new FileOutputStream(file);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
-            fos.flush();
-            fos.close();
-            file.setReadable(true, false);
 
-            Intent shareIntent = new Intent();
-            shareIntent.setAction(Intent.ACTION_SEND);
-            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
-            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
-            shareIntent.setType("image/*");
-            startActivity(Intent.createChooser(shareIntent, "Share Image"));
-        } catch (Exception e) {}
+    private Bitmap x(Bitmap bitmap) {
+        int i = 4;
+        return Bitmap.createScaledBitmap(bitmap, bitmap.getWidth() / i,
+                bitmap.getHeight() / i, true);
+    }
+
+    private void shareToIG() {
+//        File file = new File(getApplicationContext().getCacheDir(), "toShare001" + ".png");
+//        try {
+//            FileOutputStream fos = new FileOutputStream(file);
+//            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+//            fos.flush();
+//            fos.close();
+//            file.setReadable(true, false);
+//
+//            Intent shareIntent = new Intent();
+//            shareIntent.setAction(Intent.ACTION_SEND);
+//            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
+//            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+//            shareIntent.setType("image/*");
+//            startActivity(Intent.createChooser(shareIntent, "Share Image"));
+//        } catch (Exception e) {}
+
+
+        Runnable shareRunnable = new Runnable() {
+            @Override
+            public void run() {
+                Log.d("sharing", "begin");
+                File file = new File(getApplicationContext().getCacheDir(), "toShare003" + ".png");
+                try {
+                    FileOutputStream fos = new FileOutputStream(file);
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+                    fos.flush();
+                    fos.close();
+                    file.setReadable(true, false);
+
+                    final Intent shareIntent = new Intent();
+                    Log.d("sharing", "firing intent");
+                    shareIntent.setAction(Intent.ACTION_SEND);
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
+                    shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+                    shareIntent.setType("image/*");
+                    Log.d("sharing", "firing intent done");
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            startActivity(Intent.createChooser(shareIntent, "Share Image"));
+                        }
+                    });
+
+                } catch (Exception e) {}
+            }
+        };
+        shareRunnable.run();
+
     }
 
 

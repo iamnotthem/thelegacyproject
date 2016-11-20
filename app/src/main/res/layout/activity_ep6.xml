@@ -59,47 +59,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <!-- Finale view -->
-    <LinearLayout
-        android:visibility="gone"
-        android:id="@+id/activity_ep1_finale"
-        android:padding="14dp"
-        android:orientation="vertical"
-        android:layout_marginTop="80dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:textSize="20sp"
-            android:textColor="@android:color/white"
-            android:id="@+id/activity_ep1_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:layout_marginTop="40dp"
-            android:textSize="20sp"
-            android:textColor="@android:color/white"
-            android:text="@string/ep1_16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/ep1_continue"
-            android:paddingLeft="14dp"
-            android:paddingRight="14dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:textSize="18sp"
-            android:textColor="@android:color/white"
-            android:background="@drawable/round"
-            android:layout_marginTop="18dp"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/ep1_17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
     <!-- Next and back -->
     <RelativeLayout
         android:id="@+id/next_back"

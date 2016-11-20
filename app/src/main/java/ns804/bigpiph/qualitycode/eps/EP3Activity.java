@@ -14,6 +14,7 @@ import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -24,6 +25,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.io.File;
+import java.io.FileOutputStream;
 
 import ns804.bigpiph.R;
 import ns804.bigpiph.qualitycode.api.ApiRequest;
@@ -484,13 +486,66 @@ public class EP3Activity extends AppCompatActivity {
             startActivity(webIntent);
     }
 
+//    private void share() {
+//        Intent shareIntent = new Intent();
+//        shareIntent.setAction(Intent.ACTION_SEND);
+//        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
+//        shareIntent.setType("image/*");
+//        startActivity(Intent.createChooser(shareIntent, "Share Image"));
+//    }
+
     private void share() {
-        Intent shareIntent = new Intent();
-        shareIntent.setAction(Intent.ACTION_SEND);
-        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
-        shareIntent.setType("image/*");
-        startActivity(Intent.createChooser(shareIntent, "Share Image"));
+
+        Runnable shareRunnable = new Runnable() {
+            @Override
+            public void run() {
+                Log.d("sharing", "begin");
+                File file = new File(getApplicationContext().getCacheDir(), "toShare002" + ".png");
+                try {
+                    FileOutputStream fos = new FileOutputStream(file);
+                    Log.d(TAG, String.valueOf(bitmap.getByteCount()));
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+                    fos.flush();
+                    fos.close();
+                    file.setReadable(true, false);
+
+                    final Intent shareIntent = new Intent();
+                    Log.d("sharing", "firing intent");
+                    shareIntent.setAction(Intent.ACTION_SEND);
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
+                    shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+                    shareIntent.setType("image/*");
+                    Log.d("sharing", "firing intent done");
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            startActivity(Intent.createChooser(shareIntent, "Share Image"));
+                        }
+                    });
+
+                } catch (Exception e) {}
+            }
+        };
+        shareRunnable.run();
+//
+//        File file = new File(getApplicationContext().getCacheDir(), "toShare001" + ".png");
+//        try {
+//            FileOutputStream fos = new FileOutputStream(file);
+//            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+//            fos.flush();
+//            fos.close();
+//            file.setReadable(true, false);
+//
+//            Intent shareIntent = new Intent();
+//            shareIntent.setAction(Intent.ACTION_SEND);
+//            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
+//            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+//            shareIntent.setType("image/*");
+//            startActivity(Intent.createChooser(shareIntent, "Share Image"));
+//        } catch (Exception e) {}
     }
+
     protected void showImageDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(EP3Activity.this);
         final String[] items = new String[]{"Take new photo", "Pick from gallery"};
@@ -573,6 +628,7 @@ public class EP3Activity extends AppCompatActivity {
             //
         }
     }
+
     @Override public void onActivityResult(int requestCode, int resultCode, final Intent data) {
         if (resultCode == Activity.RESULT_OK) {
             switch (requestCode) {
@@ -580,8 +636,7 @@ public class EP3Activity extends AppCompatActivity {
                     if (null != mImageCaptureUri) {
                         if (null != dialog) dialog.dismiss();
                         try {
-                            Bitmap original = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
-                            bitmap = ImageUtils.toGrayscale(original);
+                            bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
                             ExifInterface exifInterface = new ExifInterface(mImageCaptureUri.getPath());
                             String orientString = exifInterface.getAttribute(ExifInterface.TAG_ORIENTATION);
                             int orient = orientString != null ? Integer.parseInt(orientString) : ExifInterface.ORIENTATION_NORMAL;
@@ -592,7 +647,8 @@ public class EP3Activity extends AppCompatActivity {
                             Matrix matrix = new Matrix();
                             matrix.setRotate(rotationAngle, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
                             Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-                            bitmap = rotatedBitmap;
+                            Log.d(TAG, String.valueOf(rotatedBitmap.getByteCount()));
+                            bitmap = x(rotatedBitmap);
                         } catch (Exception e) {}
                         gotoSecond(true);
                     }
@@ -601,8 +657,7 @@ public class EP3Activity extends AppCompatActivity {
                     mImageCaptureUri = data.getData();
                     if (null != dialog) dialog.dismiss();
                     try {
-                        Bitmap original = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
-                        bitmap = ImageUtils.toGrayscale(original);
+                        bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
                         ExifInterface exifInterface = new ExifInterface(mImageCaptureUri.getPath());
                         String orientString = exifInterface.getAttribute(ExifInterface.TAG_ORIENTATION);
                         int orient = orientString != null ? Integer.parseInt(orientString) : ExifInterface.ORIENTATION_NORMAL;
@@ -613,7 +668,8 @@ public class EP3Activity extends AppCompatActivity {
                         Matrix matrix = new Matrix();
                         matrix.setRotate(rotationAngle, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
                         Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-                        bitmap = rotatedBitmap;
+                        Log.d(TAG, String.valueOf(rotatedBitmap.getByteCount()));
+                        bitmap = x(rotatedBitmap);
                     } catch (Exception e) {}
                     gotoSecond(true);
                     break;
@@ -621,8 +677,7 @@ public class EP3Activity extends AppCompatActivity {
                     if (null != mImageCaptureUri) {
                         if (null != dialog) dialog.dismiss();
                         try {
-                            Bitmap original = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
-                            bitmap = ImageUtils.toGrayscale(original);
+                            bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
                             ExifInterface exifInterface = new ExifInterface(mImageCaptureUri.getPath());
                             String orientString = exifInterface.getAttribute(ExifInterface.TAG_ORIENTATION);
                             int orient = orientString != null ? Integer.parseInt(orientString) : ExifInterface.ORIENTATION_NORMAL;
@@ -633,7 +688,8 @@ public class EP3Activity extends AppCompatActivity {
                             Matrix matrix = new Matrix();
                             matrix.setRotate(rotationAngle, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
                             Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-                            bitmap = rotatedBitmap;
+                            Log.d(TAG, String.valueOf(rotatedBitmap.getByteCount()));
+                            bitmap = x(rotatedBitmap);
                         } catch (Exception e) {}
                         gotoThirdB(true);
                     }
@@ -642,8 +698,7 @@ public class EP3Activity extends AppCompatActivity {
                     mImageCaptureUri = data.getData();
                     if (null != dialog) dialog.dismiss();
                     try {
-                        Bitmap original = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
-                        bitmap = ImageUtils.toGrayscale(original);
+                        bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageCaptureUri);
                         ExifInterface exifInterface = new ExifInterface(mImageCaptureUri.getPath());
                         String orientString = exifInterface.getAttribute(ExifInterface.TAG_ORIENTATION);
                         int orient = orientString != null ? Integer.parseInt(orientString) : ExifInterface.ORIENTATION_NORMAL;
@@ -654,12 +709,20 @@ public class EP3Activity extends AppCompatActivity {
                         Matrix matrix = new Matrix();
                         matrix.setRotate(rotationAngle, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
                         Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-                        bitmap = rotatedBitmap;
+                        Log.d(TAG, String.valueOf(rotatedBitmap.getByteCount()));
+                        bitmap = x(rotatedBitmap);
                     } catch (Exception e) {}
                     gotoThirdB(true);
                     break;
             }
         }
+    }
+
+
+    private Bitmap x(Bitmap bitmap) {
+        int i = 4;
+        return Bitmap.createScaledBitmap(bitmap, bitmap.getWidth() / i,
+                bitmap.getHeight() / i, true);
     }
 
     private void postSongTwo(String songTwo) {

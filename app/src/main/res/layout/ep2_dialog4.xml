@@ -7,7 +7,9 @@
               android:layout_width="320dp"
               android:layout_height="wrap_content">
 
+    <!-- The Area to be Shared -->
     <LinearLayout
+        android:id="@+id/meme"
         android:layout_width="290dp"
         android:layout_height="290dp">
 
