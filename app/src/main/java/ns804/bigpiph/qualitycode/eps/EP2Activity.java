@@ -10,6 +10,7 @@ import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Build;
+import android.os.CountDownTimer;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import java.io.File;
@@ -51,6 +53,7 @@ public class EP2Activity extends AppCompatActivity {
     private String txtThree = "";
     private Uri mImageCaptureUri;
     private Bitmap bitmap;
+    private Bitmap toShare;
     private boolean good = false;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +70,7 @@ public class EP2Activity extends AppCompatActivity {
         findViewById(R.id.share).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                share();
+
             }
         });
         dialog = new Dialog(EP2Activity.this, R.style.Engagement);
@@ -75,25 +78,25 @@ public class EP2Activity extends AppCompatActivity {
         gotoFirst();
     }
 
-    private void share() {
-
-        File file = new File(getApplicationContext().getCacheDir(), "toShare001" + ".png");
-        try {
-            FileOutputStream fos = new FileOutputStream(file);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
-            fos.flush();
-            fos.close();
-            file.setReadable(true, false);
-
-            Intent shareIntent = new Intent();
-            shareIntent.setAction(Intent.ACTION_SEND);
-            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
-            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
-            shareIntent.setType("image/*");
-            startActivity(Intent.createChooser(shareIntent, "Share Image"));
-        } catch (Exception e) {}
-
-    }
+//    private void share() {
+//
+//        File file = new File(getApplicationContext().getCacheDir(), "toShare001" + ".png");
+//        try {
+//            FileOutputStream fos = new FileOutputStream(file);
+//            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+//            fos.flush();
+//            fos.close();
+//            file.setReadable(true, false);
+//
+//            Intent shareIntent = new Intent();
+//            shareIntent.setAction(Intent.ACTION_SEND);
+//            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
+//            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+//            shareIntent.setType("image/*");
+//            startActivity(Intent.createChooser(shareIntent, "Share Image"));
+//        } catch (Exception e) {}
+//
+//    }
 
     private void share2() {
         Runnable shareRunnable = new Runnable() {
@@ -103,7 +106,7 @@ public class EP2Activity extends AppCompatActivity {
                 File file = new File(getApplicationContext().getCacheDir(), "toShare001" + ".png");
                 try {
                     FileOutputStream fos = new FileOutputStream(file);
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+                    toShare.compress(Bitmap.CompressFormat.PNG, 100, fos);
                     fos.flush();
                     fos.close();
                     file.setReadable(true, false);
@@ -169,7 +172,6 @@ public class EP2Activity extends AppCompatActivity {
             }
         });
     }
-
     private void gotoSecond() {
         dialog.setContentView(R.layout.ep2_dialog2);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -244,7 +246,6 @@ public class EP2Activity extends AppCompatActivity {
             }
         });
     }
-
     private void gotoThird(final boolean picTaken) {
         dialog.setContentView(R.layout.ep2_dialog3);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -322,7 +323,6 @@ public class EP2Activity extends AppCompatActivity {
             }
         });
     }
-
     private void gotoFourth() {
         dialog.setContentView(R.layout.ep2_dialog4);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -342,6 +342,25 @@ public class EP2Activity extends AppCompatActivity {
         textView3.setText(txtThree);
 
         if (bitmap != null) ((ImageView) dialog.findViewById(R.id.photo_content)).setImageBitmap(bitmap);
+
+        CountDownTimer c = new CountDownTimer(400, 400) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+            }
+
+            @Override
+            public void onFinish() {
+                LinearLayout meme = (LinearLayout) dialog.findViewById(R.id.meme);
+                meme.setDrawingCacheEnabled(true);
+                meme.buildDrawingCache();
+                toShare = Bitmap.createBitmap(meme.getDrawingCache());
+                Log.d(TAG, String.valueOf(toShare.getByteCount()));
+                meme.setDrawingCacheEnabled(false);
+            }
+        };
+        c.start();
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -349,6 +368,7 @@ public class EP2Activity extends AppCompatActivity {
                 gotoThird(false);
             }
         });
+
         dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
             @Override
             public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
@@ -359,6 +379,7 @@ public class EP2Activity extends AppCompatActivity {
                 return true;
             }
         });
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -441,7 +462,6 @@ public class EP2Activity extends AppCompatActivity {
             }
         });
     }
-
     private void gotoSixth(boolean picTaken) {
         dialog.setContentView(R.layout.ep2_dialog6);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -533,7 +553,6 @@ public class EP2Activity extends AppCompatActivity {
             }
         });
     }
-
     private void gotoFinal() {
         dialog.setContentView(R.layout.ep2_final);
         WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
@@ -715,6 +734,7 @@ public class EP2Activity extends AppCompatActivity {
                             matrix.setRotate(rotationAngle, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
                             Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
                             bitmap = rotatedBitmap;
+                            Log.d(TAG, String.valueOf(bitmap.getByteCount()));
                         } catch (Exception e) {}
                         gotoThird(true);
                     }
@@ -737,6 +757,7 @@ public class EP2Activity extends AppCompatActivity {
                         matrix.setRotate(rotationAngle, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
                         Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
                         bitmap = rotatedBitmap;
+                        Log.d(TAG, String.valueOf(bitmap.getByteCount()));
                     } catch (Exception e) {}
                     gotoThird(true);
                     // TODO: uploadCover(false);
@@ -758,6 +779,7 @@ public class EP2Activity extends AppCompatActivity {
                             matrix.setRotate(rotationAngle, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
                             Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
                             bitmap = rotatedBitmap;
+                            Log.d(TAG, String.valueOf(bitmap.getByteCount()));
                         } catch (Exception e) {}
                         gotoSixth(true);
                     }
@@ -780,6 +802,7 @@ public class EP2Activity extends AppCompatActivity {
                         matrix.setRotate(rotationAngle, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
                         Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
                         bitmap = rotatedBitmap;
+                        Log.d(TAG, String.valueOf(bitmap.getByteCount()));
                     } catch (Exception e) {}
                     gotoSixth(true);
                     // TODO: uploadCover(false);

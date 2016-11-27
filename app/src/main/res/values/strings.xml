@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">bigpiph</string>
+    <string name="app_name">TLP</string>
     <string name="login">log in</string>
     <string name="create_account">Create Account</string>
     <string name="intro">Welcome to the 1st Living Album. The Legacy Project is an interactive, hip-hop experience like none other.</string>
@@ -186,8 +186,8 @@ Tyson Clark]]> </string>
         I\'m in a giving mood.  Matter of fact, I wanna give to those who give.  </string>
     <string name="ep5_2">Where\'s my cut?</string>
     <string name="ep5_3">So here\'s the deal, do you know of any charitable
-        organization that needs some extra financial help?  If so, I have 2
-        $200 prizes (all ones) to give to two causes.  I\'m going to choose the
+        organization that needs some extra financial help?  If so, I have a
+        $250 prize (all ones) to give to a cause.  I\'m going to choose the
         top 5 that catch my eye and then present them to you, and a few other FAM members to pick the winner.</string>
     <string name="ep5_4">Pretty cool, right?  Yeah, I am.  Well, first we have to get those submissions up and in.</string>
     <string name="ep5_5">Check out the Submission Form</string>
@@ -221,7 +221,7 @@ Tyson Clark]]> </string>
         Please use #getlooseTLP to tag it, too!</string>
     <string name="ep6_11">Of Course I Want to Share and See!</string>
     <string name="ep6_12">No thank you.</string>
-    <string name="ep6_13">Once again, let\'s see what other people shared. It\'s picture time!</string>
+    <string name="ep6_13">Here we go!</string>
     <string name="ep6_14">You sure you don\'t want to share yours?</string>
     <string name="ep6_15">You\'re right.  I do.</string>
     <string name="ep6_16">No thank you.</string>
@@ -229,6 +229,7 @@ Tyson Clark]]> </string>
         Pilot Playlist.</string>
     <string name="ep6_18">What are some of yours?</string>
     <string name="ep6_19">https://www.instagram.com/explore/tags/getlooseTLP/</string>
+    <string name="ep6_20">Share</string>
 
 
     <string name="ep7_1">So, the other day when I was speaking with Piph, he was asking me if I\'m ready

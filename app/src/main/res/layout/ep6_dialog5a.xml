@@ -20,7 +20,7 @@
         android:layout_marginBottom="38dp"
         android:layout_gravity="center_horizontal"
         android:textColor="@android:color/holo_blue_dark"
-        android:text="Instagram"
+        android:text="@string/ep6_20"
         android:textSize="16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
