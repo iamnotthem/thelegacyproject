@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -34,6 +35,9 @@ import ns804.bigpiph.shitcode.models.Tracks;
  * Created by Luke747 on 5/20/16.
  */
 public class Music_Activity extends AppCompatActivity implements Runnable, SeekBar.OnSeekBarChangeListener{
+    // Anatol begin
+    private int currentIndex;
+    // Anatol end
     LinearLayout itune, spotif,apple, bandcamp, soundcloud, cd;
     String title = "", sound ="", art = "", itu = "", spo = "", app = "";
     Integer num;
@@ -186,6 +190,11 @@ public class Music_Activity extends AppCompatActivity implements Runnable, SeekB
                 playing.setText(mListItems.get(position).getTitle());
                 starting = mListItems.get(position).getTitle();
                 m = mListItems.get(position).getID();
+
+                // Anatol begin
+                currentIndex = position;
+                // Anatol end
+
                 try {
 
                     //mediaPlayer.reset();
@@ -234,12 +243,57 @@ public class Music_Activity extends AppCompatActivity implements Runnable, SeekB
         soundcloud.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(m >= 0) {
-                    String itun = mListItems.get(m).getSoundcloudDown();
-                    Intent itune = new Intent(context, WebActivity.class);
-                    itune.putExtra("url", itun);
-                    startActivity(itune);
-                }else{return;}
+                togglePlayPause();
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                String url = "https://soundcloud.com/bigpiph/sets/i-am-not-them-the-legacy";
+                switch (currentIndex) {
+                    case 0:
+                        url = "https://soundcloud.com/bigpiph/1endless-summer?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 1:
+                        url = "https://soundcloud.com/bigpiph/2aint-too-many?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 2:
+                        url = "https://soundcloud.com/bigpiph/3get-like-me-fixed?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 3:
+                        url = "https://soundcloud.com/bigpiph/4runfree-fallin?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 4:
+                        url = "https://soundcloud.com/bigpiph/5why-should-i-care?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 5:
+                        url = "https://soundcloud.com/bigpiph/6too-late?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 6:
+                        url = "https://soundcloud.com/bigpiph/me-ft-young-red?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 7:
+                        url = "https://soundcloud.com/bigpiph/8tell-em?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 8:
+                        url = "https://soundcloud.com/bigpiph/9goodnight?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 9:
+                        url = "https://soundcloud.com/bigpiph/10get-loose-flow?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 10:
+                        url = "https://soundcloud.com/bigpiph/chills?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 11:
+                        url = "https://soundcloud.com/bigpiph/12you-gotta-know?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 12:
+                        url = "https://soundcloud.com/bigpiph/13hey-hey-hey?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                    case 13:
+                        url = "https://soundcloud.com/bigpiph/14knowing?in=bigpiph/sets/i-am-not-them-the-legacy";
+                        break;
+                }
+                intent.setData(Uri.parse(url));
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
 
             }
         });
@@ -257,7 +311,7 @@ public class Music_Activity extends AppCompatActivity implements Runnable, SeekB
         cd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String itun = "http://www.bigpiph.com/store/i-am-not-them-the-pre-ep";
+                String itun = "http://www.bigpiph.com/store/sly5l83kfscxe2e8buiqnl57hbyney";
                 Intent itune = new Intent(context, WebActivity.class);
                 itune.putExtra("url", itun);
                 startActivity(itune);
@@ -315,7 +369,8 @@ public class Music_Activity extends AppCompatActivity implements Runnable, SeekB
 
         mediaControls();
     }
-    public void navbar(){
+
+    public void navbar() {
         episode = (RelativeLayout) findViewById(R.id.epiButton);
         music = (RelativeLayout)findViewById(R.id.musicTool);
         fam = (RelativeLayout)findViewById(R.id.famButton);
@@ -393,65 +448,96 @@ public class Music_Activity extends AppCompatActivity implements Runnable, SeekB
         }
     }
 
-    public void mediaControls(){
+    public void mediaControls() {
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Anatol begin
                 try {
-
-
-                    Log.d("UPDATE_UI","position: " +m);
-
                     stopmyPlayer();
-
-                    if (m < mListItems.size()) {
-
-
-                        starting = mListItems.get(m + 1).getTitle();
-                        String nUrl = mListItems.get(m + 1).getStreamURL();
-                        Log.d("UPDATE_UI","new position: " +(m+1));
-                        int n = m + 1;
-                        m = n;
-
-                        playing.setText(starting);
-                        mUrl = nUrl + "?client_id=" + Config.CLIENT_ID;
-                        playAudio(mUrl);
-
-
-
-                    }else{
-                        Toast.makeText(context, "This is the last track", Toast.LENGTH_SHORT).show();
+                    if (currentIndex > mListItems.size() - 2) {
+                        // Toast.makeText(context, "This is the last song.", Toast.LENGTH_SHORT).show();
+                        // start over with track 1
+                        playing.setText(mListItems.get(0).getTitle());
+                        playAudio(mListItems.get(0).getStreamURL() + "?client_id=" + Config.CLIENT_ID);
+                        currentIndex = 0;
+                    } else {
+                        playing.setText(mListItems.get(currentIndex + 1).getTitle());
+                        playAudio(mListItems.get(currentIndex + 1).getStreamURL() + "?client_id=" + Config.CLIENT_ID);
+                        currentIndex++;
                     }
-                }catch (Exception f){
-                    f.printStackTrace();
-                }
+
+                } catch (Exception e) { }
+                // Anatol end
+
+
+
+
+//
+//                try {
+//                    Log.d("UPDATE_UI","position: " +  m);
+//
+//                    stopmyPlayer();
+//
+//                    if (m < mListItems.size()) {
+//                        starting = mListItems.get(m + 1).getTitle();
+//                        String nUrl = mListItems.get(m + 1).getStreamURL();
+//                        Log.d("UPDATE_UI","new position: " +(m+1));
+//                        int n = m + 1;
+//                        m = n;
+//                        playing.setText(starting);
+//
+//                        mUrl = nUrl + "?client_id=" + Config.CLIENT_ID;
+//                        playAudio(mUrl);
+//                    } else {
+//                        Toast.makeText(context, "This is the last track", Toast.LENGTH_SHORT).show();
+//                    }
+//                }catch (Exception f){
+//                    f.printStackTrace();
+//                }
             }
         });
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Anatol begin
                 try {
-                    int n = m - 1;
-                    m = n;
-                    stopmyPlayer();
-                    if (m >= 0) {
-                        Log.d("UPDATE_UI","position: " +m);
-                        starting = mListItems.get(m).getTitle();
-                        String nUrl = mListItems.get(m ).getStreamURL();
-                        Log.d("UPDATE_UI","new position: " +(m-1));
 
-                        mUrl = nUrl + "?client_id=" + Config.CLIENT_ID;
-
-                        playing.setText(starting);
-                        playAudio(mUrl);
-
-                    }else{
-                        Toast.makeText(context, "This is the first track", Toast.LENGTH_SHORT).show();
+                    if (currentIndex == 0) {
+                        stopmyPlayer();
+                        playAudio(mListItems.get(currentIndex).getStreamURL() + "?client_id=" + Config.CLIENT_ID);
+                    } else {
+                        stopmyPlayer();
+                        playing.setText(mListItems.get(currentIndex - 1).getTitle());
+                        playAudio(mListItems.get(currentIndex - 1).getStreamURL() + "?client_id=" + Config.CLIENT_ID);
+                        currentIndex--;
                     }
-                }catch (Exception g){
-                    g.printStackTrace();
-                }
+                } catch (Exception e) {}
+                // Anatol end
+
+
+//                try {
+//                    int n = m - 1;
+//                    m = n;
+//                    stopmyPlayer();
+//                    if (m >= 0) {
+//                        Log.d("UPDATE_UI","position: " +m);
+//                        starting = mListItems.get(m).getTitle();
+//                        String nUrl = mListItems.get(m ).getStreamURL();
+//                        Log.d("UPDATE_UI","new position: " +(m-1));
+//
+//                        mUrl = nUrl + "?client_id=" + Config.CLIENT_ID;
+//
+//                        playing.setText(starting);
+//                        playAudio(mUrl);
+//
+//                    }else{
+//                        Toast.makeText(context, "This is the first track", Toast.LENGTH_SHORT).show();
+//                    }
+//                }catch (Exception g){
+//                    g.printStackTrace();
+//                }
             }
 
         });
@@ -480,6 +566,7 @@ public class Music_Activity extends AppCompatActivity implements Runnable, SeekB
 
 
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -495,45 +582,8 @@ public class Music_Activity extends AppCompatActivity implements Runnable, SeekB
 
     }
 
-
     public void start() {
         mediaPlayer.start();
-    }
-
-    public void pause() {
-        mediaPlayer.pause();
-    }
-
-    public int getDuration() {
-        return mediaPlayer.getDuration();
-    }
-
-    public int getCurrentPosition() {
-        return mediaPlayer.getCurrentPosition();
-    }
-
-    public void seekTo(int progress) {
-        mediaPlayer.seekTo(progress);
-    }
-
-    public boolean isPlaying() {
-        return mediaPlayer.isPlaying();
-    }
-
-    public int getBufferPercentage() {
-        return 0;
-    }
-
-    public boolean canPause() {
-        return true;
-    }
-
-    public boolean canSeekBackward() {
-        return true;
-    }
-
-    public boolean canSeekForward() {
-        return true;
     }
 
     public void run() {
@@ -651,6 +701,7 @@ public class Music_Activity extends AppCompatActivity implements Runnable, SeekB
             media.animate().translationYBy(-heightM).start();
         }
 
+
         m = serviceIntent.getIntExtra("pos",0);
         Log.d("UPDATE_UI_epi","counter: "+counter);
         Log.d("UPDATE_UI_epi","length: "+mediamax);
@@ -663,13 +714,14 @@ public class Music_Activity extends AppCompatActivity implements Runnable, SeekB
         seekbar.setProgress(seekprogress);
 
         if (songended == 1) {
-            int heightM = media.getHeight();
-            //media.setVisibility(View.GONE);
-            media.animate().translationYBy(heightM+8).start();
-
-
-            stopmyPlayer();
-            pla = false;
+//            int heightM = media.getHeight();
+//            //media.setVisibility(View.GONE);
+//            media.animate().translationYBy(heightM+8).start();
+//
+//
+//            stopmyPlayer();
+//            pla = false;
+            next.performClick();
         }
     }
 
@@ -735,7 +787,6 @@ public class Music_Activity extends AppCompatActivity implements Runnable, SeekB
 
         outState.putBundle("bundle", bundleIt);
     }
-
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState){
         super.onRestoreInstanceState(savedInstanceState);

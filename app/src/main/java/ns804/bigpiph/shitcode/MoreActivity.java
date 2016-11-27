@@ -153,23 +153,32 @@ public class MoreActivity extends AppCompatActivity implements Runnable, SeekBar
                 startWebActivity(context, url);
             }
         });
+
+
         friends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("text/html");
-                intent.putExtra(Intent.EXTRA_EMAIL, "bigpiph@gmail.com");
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT, context.getString(R.string.play_store_url));
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Check out Big Piph");
-
-                startActivity(Intent.createChooser(intent, "Send Email"));;
+                startActivity(Intent.createChooser(intent, "Share"));
             }
         });
+
+
         rate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                return;
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(context.getString(R.string.play_store_url)));
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
             }
         });
+
+
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -805,46 +805,62 @@
                 android:orientation="horizontal"
                 android:id="@+id/crowdborder"
                 android:layout_below="@id/crowdfund"
-                android:background="@color/colorPrimaryDark">
+                android:background="@color/colorPrimaryDark"/>
 
-            </LinearLayout>
 
-                <LinearLayout
+            <View android:layout_width="match_parent"
+                android:layout_below="@+id/crowdborder"
+                android:id="@+id/o"
+                android:background="@color/colorPrimary"
+                android:layout_height="40dp"/>
+
+            <View
+                android:layout_below="@+id/o"
+                android:background="@color/colorPrimaryDark"
+                android:id="@+id/w"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/w"
+                android:id="@+id/logout"
+                android:orientation="horizontal"
+                android:layout_margin="3dp"
+                android:weightSum="10"
+                android:clickable="true">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/crowdborder"
-                    android:id="@+id/logout"
-                    android:orientation="horizontal"
-                    android:layout_margin="3dp"
-                    android:weightSum="10"
-                    android:clickable="true"
-                    >
-    
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:text="Log out "
-                        android:padding="10dp"
-                        android:textSize="16dp"
-                        android:layout_weight="9"/>
-
-    
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:orientation="horizontal"
-                    android:id="@+id/logoutBorder"
-                    android:layout_below="@id/logout"
-                    android:background="@color/colorPrimaryDark">
-                </LinearLayout>
-
-
+                    android:layout_marginLeft="8dp"
+                    android:text="Log out"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:layout_weight="9"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                android:id="@+id/logoutBorder"
+                android:layout_below="@id/logout"
+                android:background="@color/colorPrimaryDark">
+            </LinearLayout>
         </RelativeLayout>
-
-
     </ScrollView>
+
+
+
+
+
+
+
+
+
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

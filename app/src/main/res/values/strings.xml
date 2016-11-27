@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TLP</string>
     <string name="login">log in</string>
+    <string name="play_store_url">https://play.google.com/store/apps/details?id=ns804.bigpiph</string>
     <string name="create_account">Create Account</string>
     <string name="intro">Welcome to the 1st Living Album. The Legacy Project is an interactive, hip-hop experience like none other.</string>
     <string name="KNC">Kings No Crowns/// Queens No Crowns is a lifestyle brand "For those who don't need permission for greatness..."</string>

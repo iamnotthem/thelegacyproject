@@ -3,228 +3,228 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.2"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_a20147ac7db6c3e84df88f8d1051b3d1e40295fc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\libs\YouTubeAndroidPlayerApi.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\YouTubeAndroidPlayerApi_36ecf7a283513f41cbed3618d64764888c320687.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.1.1\2336b2018cd70df8d96a4a07e9425171c054e10f\logging-interceptor-3.1.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2336b2018cd70df8d96a4a07e9425171c054e10f">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\release\logging-interceptor-3.1.1_b41faff9d0c05cab384b30ba385b8968d04f3465.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\libs\Pushwoosh.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="546eabfe098a304341ef4816a61c654a15fab273">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\Pushwoosh_ced335d939dc0c0797f0286ea823084a001579a6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\release\picasso-2.4.0_2ade98d4f0a57ba71547583df0f536259d0b7038.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.0\49eb3ad545e7701234e4dd83db8dc1344b577f23\converter-gson-2.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="49eb3ad545e7701234e4dd83db8dc1344b577f23">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\release\converter-gson-2.0.0_d61842c9925b6892777584becc0609b616c9630a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-8.4.0_cd7506782c8810bdc624985f3146b36b48efc112.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.6.1\b9d63507329a7178e026fc334f87587ee5070ac5\gson-2.6.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\release\gson-2.6.1_ff8064b77de250b5662841ee16033d0c2634a4d8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\release\support-annotations-23.4.0_e3cc5773164d5ed5a929d2d3b9193829f287b8dd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_462d138548262fed9b0613a1a5e32357ff556709.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_0e7b06c2b7fe751baebd85ba80dba0234900f16e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_e74d60940f7f28e171371a1809dd8749ea0866fc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.2.0\f7873a2ebde246a45c2a8d6f3247108b4c88a879\okhttp-3.2.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\release\okhttp-3.2.0_669734e1bf33c61a4d8cd84d33fe8976fb0d34e9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\libs\openyoutubeactivity-1.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="f984c468ead9ab1148ad81a52eac62110ec373f7">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\openyoutubeactivity-1.1_eb7d9a38ad0c89e021052557fb04d334a5b096b8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-8.4.0_c5f34de5aaced6e8f375482686f1c4a8d17038e2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_f534627ff8e60aeeed0a4670bff027093880407d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\percent\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="91c2541305eec5a688f3a60529d974e48f77d760">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.android.support-percent-23.4.0_730e07e9c6ab9a04a69715f6b9f6e402ef432cd1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="04de44f90606c77f3b28cf44861f306290505aac">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-8.4.0_2ff66b45726f59df40c1d5a07cf210d8af918e6d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-measurement-8.4.0_33a799d85e6dee06491d48571238f034015e14eb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.8.0\a517f29ed06be2b2879524fcd94b6e9b36e2e0b5\retrofit-1.8.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="a517f29ed06be2b2879524fcd94b6e9b36e2e0b5">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\release\retrofit-1.8.0_ebb8a9648a03afb148f816b818b80027571e2b7e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.0\5c06d197fb7fa875ad452f562e3310dd9949d066\retrofit-2.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="5c06d197fb7fa875ad452f562e3310dd9949d066">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\release\retrofit-2.0.0_9895a95f088d193c78ace40f1df10e39049be771.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\release\okio-1.6.0_c8270745791fa46527c663d1e0c81953fcf4bb57.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_ed451a49a80645ec6abe650131ed1dbc33121544.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\libs\firebase-client-android-2.5.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b54cf0400e2248d6c133c7b0a77dea1be09978cc">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\firebase-client-android-2.5.2_0c3c8c075ad1b62cc9c872745acfb4dbc0c728f3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
+        revision="25.0.1"
         sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="C:\Users\Evgheni\Desktop\october\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_7063edfa02c09e584d5e29d6a91051127bee6527.jar" />
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_d9080bc5d6664aaade9d804062eaf95a920bd41c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\libs\firebase-client-android-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b54cf0400e2248d6c133c7b0a77dea1be09978cc">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\firebase-client-android-2.5.2_5fd2a193e842128835333eff21a137c2fe131214.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_897e176c17e6341b73a37221d39fb874c7d860c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\libs\openyoutubeactivity-1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f984c468ead9ab1148ad81a52eac62110ec373f7">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\openyoutubeactivity-1.1_e45271f48e1ac2fb1b2390e5250798693084178e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.0\5c06d197fb7fa875ad452f562e3310dd9949d066\retrofit-2.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5c06d197fb7fa875ad452f562e3310dd9949d066">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\retrofit-2.0.0_6cade46736fad38ceafb2fefa6b6af96d32bdfc5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\libs\Pushwoosh.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="546eabfe098a304341ef4816a61c654a15fab273">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\Pushwoosh_3bd86100fb29c13d23e9a31178a40386b666cd86.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\percent\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="91c2541305eec5a688f3a60529d974e48f77d760">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.android.support-percent-23.4.0_49e7f4ea1e4f36063e6549da5f19d440dfc8826e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.1.1\2336b2018cd70df8d96a4a07e9425171c054e10f\logging-interceptor-3.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="2336b2018cd70df8d96a4a07e9425171c054e10f">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\logging-interceptor-3.1.1_b2a3d69ab8b4c33e8a597800ca20898b3ce88184.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-measurement-8.4.0_2c913800be677799f8405125c4099fcbd5e8da4f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-8.4.0_52f62c4c081f8e665b6b5a2a323664a7a2c016e1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.2.0\f7873a2ebde246a45c2a8d6f3247108b4c88a879\okhttp-3.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\okhttp-3.2.0_872d776a4369becfcac32c9476e80e0c2d9f99d0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.8.0\a517f29ed06be2b2879524fcd94b6e9b36e2e0b5\retrofit-1.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a517f29ed06be2b2879524fcd94b6e9b36e2e0b5">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\retrofit-1.8.0_c253da812a0320173c85be9bed4b9e1e2135bf80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_4b24ad9b170e04cbc067c789f7c0f47c4fdfd032.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-8.4.0_27d0c04c3d1165a1e8e1eafd7211faef4863865a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.0\49eb3ad545e7701234e4dd83db8dc1344b577f23\converter-gson-2.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="49eb3ad545e7701234e4dd83db8dc1344b577f23">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\converter-gson-2.0.0_4c306313249748486c60f62ac972e6ceb455ef53.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\picasso-2.4.0_14ddeb02041ca4c49809ab9cd6e7cbf7afb7fe4c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_b40c329f2ece704217e8d871d16a4cd6fc9485bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.6.1\b9d63507329a7178e026fc334f87587ee5070ac5\gson-2.6.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\gson-2.6.1_a31c74bfd75becc89a731fd3f637332e31ee5af6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_374a0988ec6cba3b5eb90a5535e54f0e54679622.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_0960d85dc59b7a695ec63d9cf749d7db6eea59d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\okio-1.6.0_0fd77017390cdd6710aa9445eeca3396ec22ee03.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-8.4.0_b8b47478c4d07cce72f3a5ebce5878fcb848ce17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\libs\YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\YouTubeAndroidPlayerApi_30e2c4a07f07f3ec639c29a205c90ef1e5506616.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_fc8b0c8f4d7ea93f8bf1bcea8c2b46fc40d6361e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\gherg\Documents\thelegacyproject\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_1fdcad33872c3bb8ad4a8a530038b595e8a8bbbc.jar" />
     </item>
 
 </items>
